@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">MyPortfolio</div>
+        <nav class="nav">
+            <a href="#about" class="nav-link">О себе</a>
+            <a href="#skills" class="nav-link">Навыки</a>
+            <a href="#portfolio" class="nav-link">Портфолио</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <button class="burger-menu" style="display: none;">☰</button>
+    </header>
+
+    <main>
+        <!-- About -->
+        <section id="about" class="section about-section">
+            <h2>О себе</h2>
+            <p>Привет! Я начинающий разработчик. Создаю серверную логику, используя современные стандарты разработки.</p>
+            <p>Моя цель — развиваться в сфере бэкенда, создавать качественный код и решать интересные интерфейсные задачи.</p>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section skills-section">
+            <h2>Навыки</h2>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn">❮</button>
+                <div class="slider-track">
+                    <div class="slide-card"><h3>Java Core</h3><p>ООП и базовый синтаксис</p></div>
+                    <div class="slide-card"><h3>SQL & NoSQL</h3><p>Проектирование баз данных</p></div>
+                    <div class="slide-card"><h3>Spring Framework</h3><p>Серверная бизнес-логика</p></div>
+                </div>
+                <button class="slider-btn next-btn">❯</button>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="section portfolio-section">
+            <h2>Портфолио</h2>
+            <div class="portfolio-grid"></div>
+        </section>
+
+        <!-- Contacts -->
+        <section id="contacts" class="section contacts-section">
+            <h2>Контакты</h2>
+            <ul class="contacts-list">
+                <li><strong>Email:</strong> <a href="mailto:example@email.com">example@email.com</a></li>
+                <li><strong>Телефон:</strong> <a href="tel:+79991112233">+7 (999) 111-22-33</a></li>
+                <li><strong>Соцсети:</strong> <a href="#">Telegram</a> | <a href="#">GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 MyPortfolio. Все права защищены.</p>
+    </footer>
+
+    <!-- Модальное окно с формой обратной связи -->
+    <div id="callback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Обратная связь</h3>
+            <form id="feedback-form">
+                <input type="text" id="form-name" placeholder="Ваше имя" required>
+                <input type="email" id="form-email" placeholder="Ваш Email" required>
+                <textarea id="form-message" placeholder="Сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+                <div class="form-status"></div>
+            </form>
+        </div>
+    </div>
+
+    <button id="open-form-btn" class="fixed-contact-btn">Написать мне</button>
+
+    <button id="to-top-btn" class="to-top-btn">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
