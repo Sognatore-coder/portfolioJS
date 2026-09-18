@@ -169,6 +169,123 @@ h2 {
     text-decoration: none;
 }
 
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; top: 0; width: 100%; height: 100%; 
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center; align-items: center;
+}
+.modal-content {
+    background: white; 
+    padding: 30px; 
+    border-radius: 8px;
+    width: 100%; 
+    max-width: 400px; 
+    position: relative;
+}
+.close-modal {
+    position: absolute; 
+    right: 15px; top: 10px; 
+    font-size: 24px;
+    cursor: pointer;
+}
+#feedback-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    margin-top: 15px; 
+
+}
+#feedback-form input, #feedback-form textarea { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+
+}
+.error-field { 
+    border-color: red !important; 
+}
+
+/* Карусель навыков */
+.slider-container { 
+    display: flex; 
+    align-items: center;
+    max-width: 600px; 
+    margin: 0 auto; 
+    overflow: hidden; 
+    position: relative; 
+
+}
+.slider-track { 
+    display: flex; 
+    transition: transform 0.5s ease-in-out; 
+    width: 100%; 
+}
+
+.slide-card {
+    min-width: 100%; 
+    box-sizing: border-box; 
+    background: white; 
+    padding: 40px; 
+    text-align: center;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+}
+.slider-btn { 
+    background: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px;
+    cursor: pointer; 
+    position: absolute; 
+    z-index: 10; 
+    border-radius: 50%; 
+}
+
+.prev-btn { 
+    left: 10px; 
+} 
+
+.next-btn { 
+    right: 10px; 
+}
+
+/* Кнопка Наверх и фиксация */
+.to-top-btn { 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    display: none; 
+    background: #333; 
+    color: white; 
+    border: none; 
+    padding: 12px 16px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    z-index: 999; 
+}
+
+.fixed-contact-btn { 
+    position: fixed; 
+    bottom: 20px; 
+    left: 20px; 
+    background: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 12px 20px;
+    border-radius: 20px; 
+    cursor: pointer; 
+    z-index: 999; 
+
+}
+.nav-link.active { 
+    color: #007bff; 
+    font-weight: bold; 
+    border-bottom: 2px solid #007bff; 
+}
+
 /* 2. Tablet (768px – 1023px) */
 @media (max-width: 1023px) {
     .section {
@@ -190,13 +307,29 @@ h2 {
         flex-direction: column; 
         gap: 10px;
         padding: 15px 20px;
-        position: static; 
+        position: relative; 
+    }
+
+    .burger-menu { 
+        display: block !important; 
+        background: none; 
+        border: none; 
+        font-size: 28px; 
+        cursor: pointer; 
     }
     
-    .nav {
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .nav { 
+        display: none; 
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        width: 100%; 
+        flex-direction: column; 
+        text-align: center; 
+        background: white; 
+        padding: 20px 0; 
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        gap: 15px;
     }
 
     .section {
@@ -220,5 +353,23 @@ h2 {
     
     .about-section p {
         font-size: 1rem;
+    }
+
+    .fixed-contact-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    .to-top-btn {
+        padding: 10px 14px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .modal-content {
+        width: 90%; 
+        padding: 20px;
     }
 }
