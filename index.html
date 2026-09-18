@@ -17,6 +17,7 @@
             <a href="#portfolio" class="nav-link">Портфолио</a>
             <a href="#contacts" class="nav-link">Контакты</a>
         </nav>
+        <button class="burger-menu" style="display: none;">☰</button>
     </header>
 
     <main>
@@ -30,42 +31,21 @@
         <!-- Skills -->
         <section id="skills" class="section skills-section">
             <h2>Навыки</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Java</h3>
-                    <div class="progress-bar"><span style="width: 60%;">60%</span></div>
+            <div class="slider-container">
+                <button class="slider-btn prev-btn">❮</button>
+                <div class="slider-track">
+                    <div class="slide-card"><h3>Java Core</h3><p>ООП и базовый синтаксис</p></div>
+                    <div class="slide-card"><h3>SQL & NoSQL</h3><p>Проектирование баз данных</p></div>
+                    <div class="slide-card"><h3>Spring Framework</h3><p>Серверная бизнес-логика</p></div>
                 </div>
-                <div class="skill-card">
-                    <h3>Git</h3>
-                    <div class="progress-bar"><span style="width: 70%;">70%</span></div>
-                </div>
-                <div class="skill-card">
-                    <h3>ООП</h3>
-                    <div class="progress-bar"><span style="width: 80%;">80%</span></div>
-                </div>
+                <button class="slider-btn next-btn">❯</button>
             </div>
         </section>
 
         <!-- Portfolio -->
         <section id="portfolio" class="section portfolio-section">
             <h2>Портфолио</h2>
-            <div class="portfolio-grid">
-                <article class="portfolio-card">
-                    <img src="images/project1.jpg" alt="Проект 1" class="portfolio-img">
-                    <h3>Java Core</h3>
-                    <p>Знакомство с ООП языком. Изучение базовых библиотек для решения повседневных задач.</p>
-                </article>
-                <article class="portfolio-card">
-                    <img src="images/project2.jpg" alt="Проект 2" class="portfolio-img">
-                    <h3>SQL & NoSQL</h3>
-                    <p>Изучение языка запроса, создание сущностей, работа с неструктурированными данными. Умение выбирать между строгой привязкой или динамическим расширением.</p>
-                </article>
-                <article class="portfolio-card">
-                    <img src="images/project3.jpg" alt="Проект 3" class="portfolio-img">
-                    <h3>Spring Framework</h3>
-                    <p>Изучение мощного фреймворка: написание бизнес-логики, подключение к БД, реализация телеграм бота, работа с внешними сервисами(API).</p>
-                </article>
-            </div>
+            <div class="portfolio-grid"></div>
         </section>
 
         <!-- Contacts -->
@@ -82,8 +62,28 @@
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2026 MyPortfolio. Все права защищены.</p>
-        <p><a href="#about">Наверх</a></p>
     </footer>
 
+    <!-- Модальное окно с формой обратной связи -->
+    <div id="callback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Обратная связь</h3>
+            <form id="feedback-form">
+                <input type="text" id="form-name" placeholder="Ваше имя" required>
+                <input type="email" id="form-email" placeholder="Ваш Email" required>
+                <textarea id="form-message" placeholder="Сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+                <div class="form-status"></div>
+            </form>
+        </div>
+    </div>
+
+    <button id="open-form-btn" class="fixed-contact-btn">Написать мне</button>
+
+    <button id="to-top-btn" class="to-top-btn">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
