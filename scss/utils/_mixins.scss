@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+// (Mobile First)
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Неизвестный брейкпоинт: #{$breakpoint}. Используйте: mobile, tablet, desktop.";
+  }
+}
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
