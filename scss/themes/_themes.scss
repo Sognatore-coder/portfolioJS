@@ -1,0 +1,39 @@
+$theme-light: (
+  bg-body: #f8f9fa,
+  bg-card: #ffffff,
+  bg-header: #ffffff,
+  bg-footer: #212529,
+  text-main: #333333,
+  text-muted: #666666,
+  text-light: #ffffff,
+  primary: #007bff,
+  primary-hover: #0056b3
+);
+
+$theme-dark: (
+  bg-body: #121212,
+  bg-card: #1e1e1e,
+  bg-header: #1e1e1e,
+  bg-footer: #0a0a0a,
+  text-main: #e0e0e0,
+  text-muted: #aaaaaa,
+  text-light: #ffffff,
+  primary: #375a7f,
+  primary-hover: #2b4764
+);
+
+:root {
+  color-scheme: light;
+
+  @each $key, $value in $theme-light {
+    --color-#{$key}: #{$value};
+  }
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  @each $key, $value in $theme-dark {
+    --color-#{$key}: #{$value};
+  }
+}

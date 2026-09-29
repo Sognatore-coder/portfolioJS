@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-визитка Portfolio</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__logo">MyPortfolio</div>
+        
+        <!-- Кнопка переключения тем -->
+        <button class="btn btn--theme-toggle js-theme-toggle">Тёмная тема</button>
+        
+        <button class="burger-menu js-burger-menu">☰</button>
+        
+        <nav class="nav js-nav">
+            <a href="#about" class="nav__link js-nav-link">О себе</a>
+            <a href="#skills" class="nav__link js-nav-link">Навыки</a>
+            <a href="#portfolio" class="nav__link js-nav-link">Портфолио</a>
+            <a href="#contacts" class="nav__link js-nav-link">Контакты</a>
+        </nav>
+    </header>
+
+    <main style="padding-top: 80px;">
+        <section id="about" class="section">
+            <h2 class="section__title">О себе</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p>Привет! Я начинающий разработчик. Создаю серверную логику, используя современные стандарты разработки.</p>
+                <p>Моя цель — развиваться в сфере бэкенда, создавать качественный код и решать интересные интерфейсные задачи.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2 class="section__title">Навыки</h2>
+            <div class="slider js-slider-container">
+                <button class="slider__btn slider__btn--prev js-prev-btn">❮</button>
+                <div class="slider__track js-slider-track">
+                    <div class="card js-slide-card"><h3>Java Core</h3><p>ООП и базовый синтаксис</p></div>
+                    <div class="card js-slide-card"><h3>SQL & NoSQL</h3><p>Проектирование баз данных</p></div>
+                    <div class="card js-slide-card"><h3>Spring Framework</h3><p>Серверная бизнес-логика</p></div>
+                </div>
+                <button class="slider__btn slider__btn--next js-next-btn">❯</button>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section">
+            <h2 class="section__title">Портфолио</h2>
+            <div class="grid-container js-portfolio-grid"></div>
+        </section>
+
+        <section id="contacts" class="section">
+            <h2 class="section__title">Контакты</h2>
+            <ul style="list-style: none; text-align: center; display: flex; flex-direction: column; gap: 15px;">
+                <li><strong>Email:</strong> <a href="mailto:example@email.com">example@email.com</a></li>
+                <li><strong>Телефон:</strong> <a href="tel:+79991112233">+7 (999) 111-22-33</a></li>
+                <li><strong>Соцсети:</strong> <a href="#">Telegram</a> | <a href="#">GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 MyPortfolio. Все права защищены.</p>
+        <p><a href="#about" class="footer__link">Наверх</a></p>
+    </footer>
+
+    <!-- Окна и сервисные кнопки -->
+    <div id="callback-modal" class="modal js-modal">
+        <div class="modal__content">
+            <span class="modal__close js-close-modal">&times;</span>
+            <h3>Обратная связь</h3>
+            <form id="feedback-form" class="form js-feedback-form">
+                <input type="text" id="form-name" class="form__input" placeholder="Ваше имя" required>
+                <input type="email" id="form-email" class="form__input" placeholder="Ваш Email" required>
+                <textarea id="form-message" class="form__input" placeholder="Сообщение" required></textarea>
+                <button type="submit" class="btn">Отправить</button>
+                <div class="form-status js-form-status"></div>
+            </form>
+        </div>
+    </div>
+
+    <button id="open-form-btn" class="btn btn--fixed-left js-open-form-btn">Написать мне</button>
+    <button id="to-top-btn" class="btn btn--fixed-right js-to-top-btn">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
