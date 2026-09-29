@@ -1,0 +1,24 @@
+{
+  "name": "portfolioweb",
+  "version": "1.0.0",
+  "description": "Сайт-визитка с использованием Sass",
+  "main": "index.html",
+  "scripts": {
+    "sass:dev": "sass --watch scss/main.scss:dist/css/main.css",
+    "build": "sass --no-source-map --style=compressed scss/main.scss:dist/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sognatore-coder/portfolioJS.git"
+  },
+  "keywords": [],
+  "author": "Sognatore-coder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sognatore-coder/portfolioJS/issues"
+  },
+  "homepage": "https://github.com/Sognatore-coder/portfolioJS#readme",
+  "devDependencies": {
+    "sass": "^1.70.0"
+  }
+}
